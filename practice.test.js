@@ -1,4 +1,4 @@
-import { capitalize, reverseString, Calculator, caesarCipher } from "./practice"
+import { capitalize, reverseString, Calculator, caesarCipher, analyzeArray } from "./practice"
 
 test('capitalize one word', () => {
   expect(capitalize("hello")).toBe("Hello");
@@ -24,4 +24,13 @@ test('caculator operations', () => {
 test('Caesar Cipher', () => {
   expect(caesarCipher("attack at dawn", 5)).toBe("fyyfhp fy ifbs");
   expect(caesarCipher("HELLO WORLD", 5)).toBe("mjqqt btwqi")
+})
+
+test('Analyze Array', () => {
+  expect(analyzeArray([1,8,3,4,2,6])).toEqual({
+    average: 4,
+    min: 1,
+    max: 8,
+    length: 6
+  })
 })

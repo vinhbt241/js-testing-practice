@@ -59,6 +59,18 @@ function caesarCipher(text, shift) {
   return caesarText;
 }
 
+function analyzeArray(array) {
+  let sum = 0;
+  for (let i = 0; i < array.length; i++) {
+    sum += array[i];
+  }
 
+  return {
+    average: sum / array.length,
+    min: Math.min(...array),
+    max: Math.max(...array),
+    length: array.length
+  }
+}
 
-export { capitalize, reverseString, Calculator, caesarCipher }
+export { capitalize, reverseString, Calculator, caesarCipher, analyzeArray }
